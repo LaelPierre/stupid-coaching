@@ -3,10 +3,9 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    raise
     if params["question"].downcase == "I am going to work"
       @response = "Great!"
-    elsif @question.end_with?("?")
+    elsif params["question"].end_with?("?")
       @response = "Silly question, get dressed and go to work!"
     else
       @response = "I don't care, get dressed and go to work!"
